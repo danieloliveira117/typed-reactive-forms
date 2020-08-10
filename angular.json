@@ -123,6 +123,86 @@
           }
         }
       }
+    },
+    "rxweb-types": {
+      "projectType": "library",
+      "root": "projects/rxweb-types",
+      "sourceRoot": "projects/rxweb-types/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/rxweb-types/tsconfig.lib.json",
+            "project": "projects/rxweb-types/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rxweb-types/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rxweb-types/src/test.ts",
+            "tsConfig": "projects/rxweb-types/tsconfig.spec.json",
+            "karmaConfig": "projects/rxweb-types/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rxweb-types/tsconfig.lib.json",
+              "projects/rxweb-types/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ng-stack-forms": {
+      "projectType": "library",
+      "root": "projects/ng-stack-forms",
+      "sourceRoot": "projects/ng-stack-forms/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-stack-forms/tsconfig.lib.json",
+            "project": "projects/ng-stack-forms/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-stack-forms/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-stack-forms/src/test.ts",
+            "tsConfig": "projects/ng-stack-forms/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-stack-forms/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-stack-forms/tsconfig.lib.json",
+              "projects/ng-stack-forms/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "typed-reactive-forms"
 }

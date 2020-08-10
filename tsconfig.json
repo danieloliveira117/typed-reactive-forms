@@ -12,6 +12,18 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/rxweb-types/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/rxweb-types/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ng-stack-forms/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ng-stack-forms/tsconfig.spec.json"
     }
 ]
 }
