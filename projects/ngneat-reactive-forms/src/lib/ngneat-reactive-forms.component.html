@@ -1,0 +1,24 @@
+<h1>@ngneat/reactive-forms</h1>
+
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
+  <label for="firstName">First Name:</label>
+  <input id="firstName" [formControl]="formGroup.controls.firstName" />
+
+  <div *ngIf="formGroup.controls.address as addressGroup">
+    <h3>Address</h3>
+    <label for="countryName">Country:</label>
+    <input id="countryName" [formControl]="addressGroup.get('countryName')" />
+  </div>
+
+  <h2>Skills</h2>
+  <div *ngIf="formGroup.controls.skills as skills">
+    <div *ngFor="let skill of skills.controls; let index = index">
+      <label for="skillName{{ index }}">Skill {{ index }}:</label>
+      <input id="skillName{{ index }}" [formControl]="skill.controls.name" />
+    </div>
+  </div>
+
+  <br />
+
+  <button type="submit">Submit</button>
+</form>

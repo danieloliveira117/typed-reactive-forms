@@ -23,6 +23,10 @@
       "ng-stack-forms": [
         "dist/ng-stack-forms/ng-stack-forms",
         "dist/ng-stack-forms"
+      ],
+      "ngneat-reactive-forms": [
+        "dist/ngneat-reactive-forms/ngneat-reactive-forms",
+        "dist/ngneat-reactive-forms"
       ]
     }
   }

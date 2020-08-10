@@ -17,6 +17,13 @@ const routes: Routes = [
       ).then((m) => m.NgStackFormsModule),
   },
   {
+    path: 'ngneat-reactive-forms',
+    loadChildren: () =>
+      import(
+        '../../projects/ngneat-reactive-forms/src/lib/ngneat-reactive-forms.module'
+      ).then((m) => m.NgneatReactiveFormsModule),
+  },
+  {
     path: '',
     redirectTo: 'rxweb-types',
     pathMatch: 'full',
